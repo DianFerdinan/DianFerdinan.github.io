@@ -3,28 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My GitHub Page</title>
+    <title>Wedding Invitation - Ferdinan & Nana</title>
     <style>
         body {
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            color: #333;
             margin: 0;
             padding: 0;
+        }
+        .header {
+            background-color: #3b5998;
+            color: white;
+            text-align: center;
+            padding: 50px 0;
+        }
+        .header h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+        .details {
+            text-align: center;
+            margin: 20px;
+        }
+        .details h2 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        .details p {
+            font-size: 1.2em;
+        }
+        .gallery {
             display: flex;
             justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f72218;
-            text-align: center;
+            gap: 10px;
+            margin: 30px 0;
         }
-        h1 {
-            color: #220;
+        .gallery img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .music {
+            text-align: center;
+            margin-top: 30px;
+        }
+        audio {
+            width: 80%;
+            border-radius: 10px;
         }
     </style>
 </head>
 <body>
-    <div>
-        <h1>Welcome to My GitHub Page!</h1>
-        <p>This is my first website hosted on GitHub Pages.</p>
+
+    <!-- Header Section -->
+    <div class="header">
+        <h1>Wedding Invitation</h1>
+        <p>Join us in celebrating the union of</p>
+        <h2>Ferdinan & Nana</h2>
     </div>
+
+    <!-- Wedding Details Section -->
+    <div class="details">
+        <h2>Save the Date</h2>
+        <p><strong>Date:</strong> May 5, 2024</p>
+        <p><strong>Location:</strong> Greja POUK Bajubang, Jambi</p>
+        <p>We are thrilled to invite you to join us as we celebrate our love and begin our new journey together.</p>
+    </div>
+
+    <!-- Gallery Section -->
+    <div class="gallery">
+        <img src="https://via.placeholder.com/200" alt="Photo 1">
+        <img src="https://via.placeholder.com/200" alt="Photo 2">
+        <img src="https://via.placeholder.com/200" alt="Photo 3">
+    </div>
+
+    <!-- Music Section -->
+    <div class="music">
+        <h3>Our Special Song</h3>
+        <audio controls>
+            <source src="your-song-url.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+
 </body>
 </html>
