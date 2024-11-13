@@ -90,10 +90,10 @@
             font-size: 1.8em;
             color: #3b5998;
         }
-        audio {
-            width: 80%;
-            border-radius: 10px;
-            margin-top: 20px;
+        .music iframe {
+            width: 100%;
+            height: 166px;
+            border: none;
         }
 
         /* Footer Section */
@@ -117,9 +117,6 @@
             .gallery img {
                 width: 200px;
                 height: 200px;
-            }
-            audio {
-                width: 90%;
             }
         }
     </style>
@@ -150,11 +147,14 @@
     <!-- Music Section -->
     <div class="music">
         <h3>Our Special Song</h3>
-        <!-- Audio Player (Auto-play enabled) -->
-        <audio autoplay>
-            <source src="https://soundcloud.com/alexanderstewart-1/perfect-ed-sheeran" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
+        <!-- SoundCloud Embed (Audio Only, Autoplay) -->
+        <iframe 
+            width="100%" 
+            height="166" 
+            scrolling="no" 
+            frameborder="no" 
+            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/123456789&color=%23ff6600&auto_play=true&hide_related=true&show_comments=false&show_user=true&show_reposts=false&visual=false">
+        </iframe>
     </div>
 
     <!-- Footer Section -->
