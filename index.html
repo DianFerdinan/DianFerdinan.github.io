@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wedding Celebration - Ferdinan & Nana</title>
+    <title>Wedding Invitation - Ferdinan & Nana</title>
     <style>
         /* General Styles */
         body {
@@ -23,18 +23,18 @@
             background-color: #3b5998;
             color: white;
             text-align: center;
-            padding: 80px 20px;
+            padding: 60px 20px;
             border-bottom: 5px solid #f1f1f1;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         .header h1 {
-            font-size: 4.5em;
+            font-size: 4em;
+            margin-bottom: 10px;
             font-weight: bold;
             text-transform: uppercase;
-            margin-bottom: 10px;
         }
         .header h2 {
-            font-size: 2.5em;
+            font-size: 2em;
             font-weight: 400;
         }
 
@@ -42,24 +42,24 @@
         .details {
             text-align: center;
             margin: 40px 20px;
-            padding: 30px;
+            padding: 20px;
             background-color: #ffffff;
-            border-radius: 15px;
+            border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         .details h2 {
-            font-size: 2.8em;
+            font-size: 2.5em;
             color: #3b5998;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
         .details p {
-            font-size: 1.3em;
+            font-size: 1.2em;
             color: #555;
             line-height: 1.6;
         }
         .details .date-time,
         .details .venue {
-            margin: 15px 0;
+            margin: 10px 0;
         }
 
         /* Gallery Section */
@@ -87,12 +87,11 @@
             margin-top: 50px;
         }
         .music h3 {
-            font-size: 2em;
+            font-size: 1.8em;
             color: #3b5998;
         }
-        audio {
-            width: 80%;
-            border-radius: 10px;
+        .music audio {
+            width: 100%;
             margin-top: 20px;
         }
 
@@ -102,14 +101,14 @@
             color: white;
             text-align: center;
             padding: 20px 10px;
-            font-size: 1.2em;
+            font-size: 1.1em;
             margin-top: 50px;
         }
 
         /* Responsive Design */
         @media (max-width: 768px) {
             .header h1 {
-                font-size: 3.5em;
+                font-size: 3em;
             }
             .details p {
                 font-size: 1.1em;
@@ -118,9 +117,6 @@
                 width: 200px;
                 height: 200px;
             }
-            audio {
-                width: 90%;
-            }
         }
     </style>
 </head>
@@ -128,33 +124,33 @@
 
     <!-- Header Section -->
     <div class="header">
-        <h1>Wedding Celebration</h1>
+        <h1>Wedding Invitation</h1>
         <h2>Ferdinan & Nana</h2>
     </div>
 
     <!-- Wedding Details Section -->
     <div class="details">
-        <h2>Join Us for Our Special Day!</h2>
+        <h2>Save the Date!</h2>
         <p class="date-time"><strong>Date:</strong> May 5, 2024</p>
         <p class="venue"><strong>Location:</strong> Greja POUK Bajubang, Jambi</p>
-        <p>We are thrilled to invite you to celebrate our wedding day. Your presence will make this occasion even more special!</p>
+        <p>We are excited to invite you to celebrate the wedding of Ferdinan and Nana. We look forward to sharing this special day with you!</p>
     </div>
 
     <!-- Gallery Section -->
     <div class="gallery">
-        <img src="https://drive.google.com/uc?export=view&id=1ai8N4ndjKT9L47Uunbb47mKGDBsJpUYr" alt="Wedding Photo 1">
-        <img src="https://drive.google.com/uc?id=1ai8N4ndjKT9L47Uunbb47mKGDBsJpUYr&export=download" alt="Wedding Photo 2">
-        <img src="https://via.placeholder.com/250" alt="Wedding Photo 3">
+        <img src="https://github.com/yourusername/yourrepository/raw/main/photo1.jpg" alt="Wedding Photo 1">
+        <img src="https://github.com/yourusername/yourrepository/raw/main/photo2.jpg" alt="Wedding Photo 2">
+        <img src="https://github.com/yourusername/yourrepository/raw/main/photo3.jpg" alt="Wedding Photo 3">
     </div>
 
-    <!-- Music Section with SoundCloud Embed -->
+    <!-- Music Section -->
     <div class="music">
-        <h3>Our Wedding Song</h3>
-        <button onclick="document.getElementById('weddingAudio').play()">Play Song</button>
-        <!-- SoundCloud Embed Code -->
-        <iframe width="100%" height="166" scrolling="no" frameborder="no" 
-                src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/alexanderstewart-1/perfect-ed-sheeran&color=%23ff6600&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&visual=true">
-        </iframe>
+        <h3>Our Special Song</h3>
+        <!-- Audio Player (Music from GitHub) -->
+        <audio controls autoplay>
+            <source src="https://github.com/yourusername/yourrepository/raw/main/music1.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
     </div>
 
     <!-- Footer Section -->
