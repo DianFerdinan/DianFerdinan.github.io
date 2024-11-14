@@ -158,33 +158,38 @@
         <img src="https://raw.githubusercontent.com/DianFerdinan/DianFerdinan.github.io/main/IMG20220412192812.jpg" alt="Wedding Photo 3">
     </div>
 
-    <!-- Music Section -->
-    <div class="music">
-        <h3>Our Special Song</h3>
-        <button onclick="playMusic()">Tap to Play Music</button>
-        <!-- SoundCloud Embed -->
-        <iframe id="soundcloud" src="https://soundcloud.com/alexanderstewart-1/perfect-ed-sheeran" allow="autoplay"></iframe>
-    </div>
+<!-- Music Section -->
+<div class="music">
+    <h3>Our Special Song</h3>
+    <button onclick="toggleMusic()">Show Music Player</button>
+    <!-- Correct SoundCloud Embed -->
+    <iframe id="soundcloud" width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" 
+            src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/alexanderstewart-1/perfect-ed-sheeran&color=%233b5998&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true" 
+            style="display: none;"></iframe>
+</div>
 
+<script>
+    function toggleMusic() {
+        const iframe = document.getElementById('soundcloud');
+        const button = document.querySelector('.music button');
+        
+        if (iframe.style.display === 'none') {
+            iframe.style.display = 'block';
+            button.textContent = 'Hide Music Player';
+        } else {
+            iframe.style.display = 'none';
+            button.textContent = 'Show Music Player';
+        }
+    }
+</script>
+
+    
     <!-- Footer Section -->
     <div class="footer">
         <p>We can't wait to celebrate with you! See you on May 5, 2024!</p>
     </div>
 
-    <script>
-        function playMusic() {
-            const iframe = document.getElementById('soundcloud');
-            const button = document.querySelector('.music button');
-            
-            if (iframe.style.display === 'none') {
-                iframe.style.display = 'block';
-                button.textContent = 'Pause Music';  // Update button text
-            } else {
-                iframe.style.display = 'none';
-                button.textContent = 'Tap to Play Music';  // Reset button text
-            }
-        }
-    </script>
+  
 
 </body>
 </html>
