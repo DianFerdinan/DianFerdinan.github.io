@@ -135,7 +135,7 @@
         }
     </style>
 </head>
-<body>
+<body onload="playMusic()">
 
     <!-- Header Section -->
     <div class="header">
@@ -158,38 +158,26 @@
         <img src="https://raw.githubusercontent.com/DianFerdinan/DianFerdinan.github.io/main/IMG20220412192812.jpg" alt="Wedding Photo 3">
     </div>
 
-<!-- Music Section -->
-<div class="music">
-    <h3>Our Special Song</h3>
-    <button onclick="toggleMusic()">Show Music Player</button>
-    <!-- Correct SoundCloud Embed -->
-    <iframe id="soundcloud" width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" 
-            src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/alexanderstewart-1/perfect-ed-sheeran&color=%233b5998&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true" 
-            style="display: none;"></iframe>
-</div>
+    <!-- Music Section -->
+    <div class="music">
+        <h3>Our Special Song</h3>
+        <!-- SoundCloud Embed -->
+        <iframe id="soundcloud" src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/alexanderstewart-1/perfect-ed-sheeran&color=%233b5998&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true" allow="autoplay"></iframe>
+    </div>
 
-<script>
-    function toggleMusic() {
-        const iframe = document.getElementById('soundcloud');
-        const button = document.querySelector('.music button');
-        
-        if (iframe.style.display === 'none') {
-            iframe.style.display = 'block';
-            button.textContent = 'Hide Music Player';
-        } else {
-            iframe.style.display = 'none';
-            button.textContent = 'Show Music Player';
-        }
-    }
-</script>
-
-    
     <!-- Footer Section -->
     <div class="footer">
         <p>We can't wait to celebrate with you! See you on May 5, 2024!</p>
     </div>
 
-  
+    <script>
+        function playMusic() {
+            const iframe = document.getElementById('soundcloud');
+            iframe.style.display = 'block'; // Show the player
+            // Try to force the autoplay (may not work due to browser restrictions)
+            iframe.contentWindow.postMessage('play', '*');
+        }
+    </script>
 
 </body>
 </html>
