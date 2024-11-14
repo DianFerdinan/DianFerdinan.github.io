@@ -107,7 +107,7 @@
             width: 100%;
             height: 166px;
             margin-top: 20px;
-            display: none;
+            border: none;
         }
 
         /* Footer Section */
@@ -162,7 +162,10 @@
     <div class="music">
         <h3>Our Special Song</h3>
         <!-- SoundCloud Embed -->
-        <iframe id="soundcloud" src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/alexanderstewart-1/perfect-ed-sheeran&color=%233b5998&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true" allow="autoplay"></iframe>
+        <iframe id="soundcloud" 
+            src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/alexanderstewart-1/perfect-ed-sheeran&color=%233b5998&auto_play=true&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=false" 
+            allow="autoplay">
+        </iframe>
     </div>
 
     <!-- Footer Section -->
@@ -171,10 +174,10 @@
     </div>
 
     <script>
-        <iframe id="soundcloud" 
-    src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/alexanderstewart-1/perfect-ed-sheeran&color=%233b5998&auto_play=true&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=false" 
-    width="100%" height="166" frameborder="no" scrolling="no" allow="autoplay">
-</iframe>
+        function playMusic() {
+            const iframe = document.getElementById('soundcloud');
+            iframe.contentWindow.postMessage('play', '*'); // Attempt to play the track
+        }
     </script>
 
 </body>
