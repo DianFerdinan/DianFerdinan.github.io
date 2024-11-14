@@ -175,8 +175,16 @@
     <script>
         function playMusic() {
             const audio = document.getElementById('weddingAudio');
-            audio.style.display = 'block';
-            audio.play();
+            const button = document.querySelector('.music button');
+            
+            if (audio.paused) {
+                audio.style.display = 'block';
+                audio.play();
+                button.textContent = 'Pause Music';  // Update button text
+            } else {
+                audio.pause();
+                button.textContent = 'Tap to Play Music';  // Reset button text
+            }
         }
     </script>
 
