@@ -90,9 +90,23 @@
             font-size: 1.8em;
             color: #3b5998;
         }
+        .music button {
+            background-color: #3b5998;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .music button:hover {
+            background-color: #2e468a;
+        }
         .music audio {
             width: 100%;
             margin-top: 20px;
+            display: none;
         }
 
         /* Footer Section */
@@ -141,22 +155,30 @@
         <img src="https://raw.githubusercontent.com/DianFerdinan/DianFerdinan.github.io/main/IMG20220409112653.jpg" alt="Wedding Photo 1">
         <img src="https://raw.githubusercontent.com/DianFerdinan/DianFerdinan.github.io/main/IMG20220410164102.jpg" alt="Wedding Photo 2">
         <img src="https://raw.githubusercontent.com/DianFerdinan/DianFerdinan.github.io/main/IMG20220412192812.jpg" alt="Wedding Photo 3">
-    </div> <!-- Closing gallery div -->
+    </div>
 
     <!-- Music Section -->
     <div class="music">
-    <h3>Our Special Song</h3>
-    <audio controls autoplay>
-        <source src="https://raw.githubusercontent.com/DianFerdinan/DianFerdinan.github.io/main/music1.mp3" type="audio/mp3">
-        Your browser does not support the audio element.
-    </audio>
-</div>
-
+        <h3>Our Special Song</h3>
+        <button onclick="playMusic()">Tap to Play Music</button>
+        <audio id="weddingAudio" controls>
+            <source src="https://raw.githubusercontent.com/DianFerdinan/DianFerdinan.github.io/main/music1.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
 
     <!-- Footer Section -->
     <div class="footer">
         <p>We can't wait to celebrate with you! See you on May 5, 2024!</p>
     </div>
+
+    <script>
+        function playMusic() {
+            const audio = document.getElementById('weddingAudio');
+            audio.style.display = 'block';
+            audio.play();
+        }
+    </script>
 
 </body>
 </html>
